@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #111;
+}
+
+main {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+}
