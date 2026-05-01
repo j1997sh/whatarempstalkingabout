@@ -1,16 +1,18 @@
-const topics = [
-  { name: "NHS", mentions: 42 },
-  { name: "Housing", mentions: 31 },
-  { name: "Immigration", mentions: 28 },
-  { name: "Economy", mentions: 23 },
-  { name: "Climate", mentions: 12 }
-];
+async function loadTopics() {
+  const res = await fetch("data.json");
+  const topics = await res.json();
 
-const container = document.getElementById("topics");
+  const container = document.getElementById("topics");
 
-container.innerHTML = topics.map(topic => `
-  <div class="card">
-    <h2>${topic.name}</h2>
-    <p>${topic.mentions} mentions this week</p>
-  </div>
-`).join("");
+  container.innerHTML = `
+    <p><strong>Last updated:</strong> ${new Date().toLocaleDateString("en-GB")}</p>
+  ` + topics.map(topic => `
+    <div class="card">
+      <h2>${topic.name}</h2>
+      <p>${topic.mentions} mentions this week</p>
+      <p>${topic.trend === "up" ? "📈 Rising" : "📉 Falling"}</p>
+    </div>
+  `).join("");
+}
+
+loadTopics();
