@@ -21,3 +21,7 @@ h1 {
   margin-bottom: 12px;
   border-radius: 10px;
 }
+
+.card h2 {
+  margin-top: 0;
+}
