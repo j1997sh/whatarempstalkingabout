@@ -1,0 +1,7 @@
+[
+  { "name": "NHS", "mentions": 42, "trend": "up" },
+  { "name": "Housing", "mentions": 31, "trend": "up" },
+  { "name": "Immigration", "mentions": 28, "trend": "down" },
+  { "name": "Economy", "mentions": 23, "trend": "up" },
+  { "name": "Climate", "mentions": 12, "trend": "down" }
+]
